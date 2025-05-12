@@ -31,3 +31,28 @@ let myObj = {
 const MyFunction = function (){
     console.log("Hello , This is my function");
 }
+
+
+// Description for stackk and heap
+// Basically the stack is used for priomitive data types and the heap is used for the non primitive data types 
+
+let MyYoutube = "dev@youtube.com"
+
+let anotherYoutube = "updated@gmail.com"
+anotherYoutube = "devjs"
+
+console.log(MyYoutube)
+console.log(anotherYoutube)
+
+
+// For heap it is different here the oroigional refernce will be change 
+
+let userOne = {
+    myname:"dev"
+}
+
+let userTwo = userOne;
+
+userTwo.myname ="aman"
+
+console.log(userOne.myname)
