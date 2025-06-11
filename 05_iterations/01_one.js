@@ -29,3 +29,24 @@ for (let i = 0; i < myArray.length; i++) {
     console.log(element);
     
 }
+
+
+// Break and Continue keyword
+
+for (let index = 1; index <=20; index++) {
+    if(index === 5){
+        console.log("Number is 5 now");
+        break;
+        
+    }
+    console.log(`Value is ${index}`);
+}
+
+for (let index = 1; index <=20; index++) {
+    if(index === 5){
+        console.log("Number is 5 now");
+        continue;
+        
+    }
+    console.log(`Value is ${index}`);
+}
