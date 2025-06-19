@@ -12,7 +12,7 @@ function printMe(item) {
 // coding.forEach(printMe)
 
 coding.forEach((element, index, arr) => {
-    // console.log(element, index, arr);
+    console.log(element, index, arr);
 })
 
 const myCoding = [
