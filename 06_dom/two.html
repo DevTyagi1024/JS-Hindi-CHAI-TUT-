@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+
+<script>
+    const total = document.querySelector('.week')
+    console.log(total)
+    const totalChilderns = total.children;
+    console.log(totalChilderns)
+    console.log(totalChilderns[2])
+
+
+    for (let i = 0; i < total.children.length; i++) {
+        console.log(total.children[i].innerHTML)
+    }
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
+
+    console.log(dayOne.parentElement)
+
+
+</script>
+
+</html>
