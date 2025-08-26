@@ -11,6 +11,11 @@
         console.log(newDiv)
         newDiv.className="main_div";
         newDiv.id = Math.random() * 10 + 1
+        newDiv.setAttribute("title" , "New title")
+        // newDiv.innerText="This is the three.html file"
+        const addText = document.createTextNode("This is the html text");
+        newDiv.appendChild(addText);
+        document.body.appendChild(newDiv)
     </script>
 </body>
 </html>
