@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Amazing Images</h2>
+
+    <div class="image">
+        <ul id="images">
+            <li>
+                <img width="200px" id="one"
+                    src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                    alt="">
+            </li>
+
+            <li>
+                <img width="200px" id="two"
+                    src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                    alt="">
+            </li>
+
+            <li>
+                <img width="200px" id="three"
+                    src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                    alt="">
+            </li>
+
+            <li>
+                <img width="200px" id="four"
+                    src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                    alt="">
+            </li>
+            <li> <a id="link" href="google.com">Link</a> </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+
+    // document.getElementById('two').onclick = function(){
+    //     alert("Two");
+    // }
+
+    // document.getElementById('two').addEventListener('click', function () {
+    //     alert('Clicked')
+    // }, false)
+
+    // document.getElementById('images').addEventListener('click', function () {
+    //     console.log("Clicked inside the ul")
+    // }, false)
+
+
+    // document.getElementById('two').addEventListener('click', function (e) {
+    //     console.log("Click on the image");
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('link').addEventListener('click', function (e) {
+    //     e.preventDefault()
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            // removeIt.style.display="none";     To hide the images step 2
+        }
+    }, false)
+
+</script>
+
+</html>
