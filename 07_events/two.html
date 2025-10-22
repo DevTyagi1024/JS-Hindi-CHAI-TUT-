@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two.html</title>
+</head>
+
+<body>
+    <h1>This is about the async functions</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "This is the new html";
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    setTimeout(function () {
+        console.log("My name is Dev Tyagi");
+    }, 2000)
+
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe);
+        console.log("stopped")
+    })
+</script>
+
+</html>
