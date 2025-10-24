@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASync Functions</title>
+    <title>Async Functions</title>
 </head>
 
 <body>
@@ -13,9 +13,19 @@
     <button id="start">Start</button>
 </body>
 <script>
-    setInterval(function () {
-        console.log("Dev Tyagi",Date.now())
-    },1000)
+
+    const sayDate = function () {
+        console.log("Dev Tyagi", Date.now())
+    }
+
+    const intId = setInterval(sayDate, 1000);
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(intId);
+        console.log("interval stopped");
+    })
+
+    
 </script>
 
 </html>
