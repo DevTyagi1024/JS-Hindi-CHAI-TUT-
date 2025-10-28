@@ -124,16 +124,33 @@ async function consumepromise() {
 consumepromise();
 
 
-async function getallusers() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        const data = await response.json();
-        console.log(data)
-    }
 
-    catch {
-        console.log("Fetch error")
-    }
-}
+// Promises with the fetch()
 
-getallusers();
+// async function getallusers() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//         const data = await response.json();
+//         console.log(data)
+//     }
+
+//     catch {
+//         console.log("Fetch error")
+//     }
+// }
+
+// getallusers();
+
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(function (response) {
+        return response.json();
+    })
+
+    .then(function (data) {
+        console.log(data);
+
+    })
+
+    .catch(function (error) {
+        console.log(error);
+    })
